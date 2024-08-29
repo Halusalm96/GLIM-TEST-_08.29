@@ -1,0 +1,25 @@
+#include <string>
+#include <vector>
+#include <iostream>
+
+using namespace std;
+
+int solution(string my_string, string is_prefix) {
+    if (my_string.length() < is_prefix.length()) {
+        return 0;
+    }
+    
+    if (my_string.substr(0, is_prefix.length()) == is_prefix) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+int main() {
+    cout << solution("banana", "ban") << endl;
+    cout << solution("banana", "nan") << endl;
+    cout << solution("banana", "banana") << endl;
+    cout << solution("banana", "apple") << endl;
+    return 0;
+}

@@ -1,0 +1,25 @@
+cmake_minimum_required(VERSION 3.10)
+
+# 프로젝트 이름 설정
+project(MyMFCApp)
+
+# C++ 표준 설정
+set(CMAKE_CXX_STANDARD 17)
+
+# MFC 사용 설정
+add_definitions(-D_AFXDLL)
+set(CMAKE_MFC_FLAG 2)
+
+# 소스 파일 추가
+set(SOURCES
+    MyDialog.cpp
+    MyApp.cpp
+)
+
+# 실행 파일 생성
+add_executable(MyMFCApp ${SOURCES})
+
+# 필요한 라이브러리 링크 (예: MFC, GDI+ 등)
+target_link_libraries(MyMFCApp ${CMAKE_SOURCE_DIR}/path/to/MFC/Lib/$(Configuration)/mfc140u.lib)
+target_link_libraries(MyMFCApp ${CMAKE_SOURCE_DIR}/path/to/MFC/Lib/$(Configuration)/mfcs140u.lib)
+target_link_libraries(MyMFCApp ${CMAKE_SOURCE_DIR}/path/to/MFC/Lib/$(Configuration)/mfcs140u.lib)

@@ -1,0 +1,22 @@
+#include <string>
+#include <vector>
+#include <iostream>
+
+using namespace std;
+
+int solution(int n, int k) {
+    int lamb = n * 12000;    
+    int free = n / 10;
+    int paid = k - free;
+    int drink = paid * 2000;
+    
+    return lamb + drink;
+}
+
+int main() {
+    int n = 10;
+    int k = 3;
+    int result = solution(n, k);
+    std::cout << "총 금액 : " << result << "원" << std::endl;
+    return 0;
+}

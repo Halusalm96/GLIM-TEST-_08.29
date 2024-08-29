@@ -1,0 +1,22 @@
+#include <string>
+#include <vector>
+#include <iostream>
+
+using namespace std;
+
+int solution(int a, int b) {
+
+    string ab = to_string(a) + to_string(b);
+    string ba = to_string(b) + to_string(a);
+    
+    int ab_int = stoi(ab);
+    int ba_int = stoi(ba);
+    
+    return max(ab_int, ba_int);
+}
+
+int main() {
+    cout << solution(9, 91) << endl;
+    cout << solution(89, 8) << endl;
+    return 0;
+}
